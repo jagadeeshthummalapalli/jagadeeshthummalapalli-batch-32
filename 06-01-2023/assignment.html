@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let evironment = prompt("Enter the environment (Satge, Prod, Dev, Test)");
+        let amount = 100;
+        let sendingamount = 0;
+
+        switch (evironment) {
+            case "Stage":
+                sendingamount = amount + amount * 30 / 100;
+                break;
+            case "Prod":
+                sendingamount = amount + amount * 5 / 100;
+                break;
+            case "Dev":
+                sendingamount = amount + amount * 10 / 100;
+                break;
+            case "Test":
+                sendingamount = amount + amount * 20 / 100;
+                break;
+            default:
+                sendingamount = amount;
+                break;
+        }
+
+        console.log(sendingamount);
+    </script>
+</body>
+
+</html>
